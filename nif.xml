@@ -4106,14 +4106,25 @@
 		<option value="31" name="SF_UNKNOWN_31">Unknown</option>
     </bitflags>
     
-    <niobject name="BSShaderProperty" abstract="0" inherit="NiProperty">
+    <niobject name="BSShaderProperty" abstract="0">
         Bethesda-specific Property node
+		<add name="Name" type="string">Object Name</add>
+		<add name="Extra Data" type="Ref" template="NiExtraData" ver1="3.0" ver2="4.2.2.0" >Extra data object index. (The first in a chain)</add>
+        <add name="Num Extra Data List" type="uint" ver1="10.0.1.0" vercond="User Version &lt; 11">The number of Extra Data objects referenced through the list.</add>
+        <add name="Extra Data List" type="Ref" template="NiExtraData" arr1="Num Extra Data List" ver1="10.0.1.0" vercond="User Version &lt; 11">List of extra data indices.</add>
+        <add name="Controller" type="Ref" template="NiTimeController" ver1="3.0">Controller object index. (The first in a chain)</add>
+		<!--testing skyrim-->
+		<add name="unknown uint" type="uint">Unknown</add>
+		<add name="Link?" type="Ref">Unknown</add>
+		<add name="Flags?" type="Flags" default="1">Unknown</add>
+		<!--testing skyrim-->
         <add name="Flags" type="Flags" default="1">Unknown</add>
         <add name="Shader Type" type="BSShaderType" default="SHADER_DEFAULT">Unknown (Set to 0x21 for NoLighting, 0x11 for Water)</add>
         <add name="Shader Flags" type="BSShaderFlags" default="0x82000000">Shader Property Flags</add>
         <add name="Unknown Int 2" type="int" default="1">Unknown</add>
         <add name="Envmap Scale" type="float" default="1.0">Unknown</add>
-    </niobject>
+
+	    </niobject>
 
     <niobject name="BSShaderLightingProperty" abstract="1" inherit="BSShaderProperty">
         Bethesda-specific property.
@@ -4138,6 +4149,7 @@
         <add name="Refraction Period" type="int" default="0" vercond="(User Version >= 11) &amp;&amp; (User Version 2 &gt; 14)">Rate of texture movement for refraction shader.</add>
         <add name="Unknown Float 4" type="float" default="4.0" vercond="(User Version >= 11) &amp;&amp; (User Version 2 &gt; 24)">Unknown</add>
         <add name="Unknown Float 5" type="float" default="1.0" vercond="(User Version >= 11) &amp;&amp; (User Version 2 &gt; 24)">Unknown</add>
+		<add name="Unknown Floats" type="float" arr1="11">Temp,Skyrim</add>
     </niobject>
 
     <niobject name="BSEffectShaderProperty" abstract="0" inherit="NiProperty">
