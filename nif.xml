@@ -2206,6 +2206,7 @@
 
     <niobject name="NiTriBasedGeom" abstract="1" inherit="NiGeometry">
         Describes a mesh, built from triangles.
+		--quick throttlekitty test, am I doing this right?--
     </niobject>
 
     <niobject name="NiGeometryData" abstract="1" inherit="NiObject">
