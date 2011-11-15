@@ -4146,9 +4146,6 @@
         <add name="Refraction Period" type="int" default="0" vercond="(User Version >= 11) &amp;&amp; (User Version 2 &gt; 14)">Rate of texture movement for refraction shader.</add>
         <add name="Unknown Float 4" type="float" default="4.0" vercond="(User Version >= 11) &amp;&amp; (User Version 2 &gt; 24)">Unknown</add>
         <add name="Unknown Float 5" type="float" default="1.0" vercond="(User Version >= 11) &amp;&amp; (User Version 2 &gt; 24)">Unknown</add>
-		<add name="Unknown Int 1" type="uint" vercond="(User Version == 12)">Unknown.</add>
-		<add name="Unknown Floats" type="float" arr1="9" vercond="(User Version == 12)">Skyrim, MaterialProperty might be merged in some form here.</add>
-		<add name="Unknown Float 6" type="float" cond="Unknown Flag == 1" vercond="User Version >= 12">Unknown</add>
     </niobject>
 
     <niobject name="BSEffectShaderProperty" abstract="0" inherit="NiProperty">
@@ -4221,9 +4218,13 @@
     </niobject>
 
     <!-- Skyrim specific property -->
-    <!-- not sure about inheritance, just guessing for now -->
     <niobject name="BSLightingShaderProperty" abstract="0" inherit="BSShaderPPLightingProperty">
         Bethesda-specific node.
+		<add name="Unknown Int 1" type="uint" vercond="(User Version == 12)">Unknown.</add>
+		<add name="Unknown Floats" type="float" arr1="9" vercond="(User Version == 12)">Skyrim, MaterialProperty might be merged in some form here.</add>
+		<add name="Unknown Float Set(?)" type="float" cond="Unknown Flag == 1" vercond="User Version >= 12">Unknown</add>
+		<add name="Unknown Float Set(?)" type="float" arr1="3" cond="Unknown Flag == 5" vercond="User Version >= 12">Unknown</add>
+		<add name="Unknown Float Set(?)" type="float" arr1="7" cond="Unknown Flag == 16" vercond="User Version >= 12">Unknown</add>
     </niobject>
 
     <niobject name="BSDismemberSkinInstance" abstract="0" inherit="NiSkinInstance">
