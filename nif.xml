@@ -4343,7 +4343,7 @@
 
     <!-- Skyrim specific property -->
     <niobject name="BSLightingShaderProperty"  abstract="0" inherit="BSShaderPPLightingProperty">
-        Bethesda-specific node.
+        Bethesda-specific node.test.
 		<add name="Unknown Int 1" type="uint" vercond="(User Version == 12)">Unknown.</add>
 		<add name="Unknown Floats" type="float" arr1="9" vercond="(User Version == 12)">Skyrim, MaterialProperty might be merged in some form here.</add>
 		<add name="Unknown Float Set(?)" type="float" cond="Unknown Flag == 1" vercond="User Version >= 12">Unknown</add>
