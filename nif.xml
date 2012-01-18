@@ -4547,8 +4547,8 @@
         <add name="Num Extra Data List" type="uint" ver1="10.0.1.0">The number of Extra Data objects referenced through the list.</add>
         <add name="Extra Data List" type="Ref" template="NiExtraData" arr1="Num Extra Data List" ver1="10.0.1.0">List of extra data indices.</add>
         <add name="Controller" type="Ref" template="NiTimeController" ver1="3.0">Controller object index. (The first in a chain)</add>
-        <add name="Shader Flags 1" type="uint" vercond="User Version == 12" default="2185233153">Skyrim Shader Flag field 1 (will use SkyrimLightingShaderFlags1)</add>
-        <add name="Shader Flags 2" type="uint" vercond="User Version == 12" default="32801">Skyrim Shader Flag field 2 (will use SkyrimLightingShaderFlags2)</add>
+        <add name="Shader Flags 1" type="SkyrimLightingShaderFlags1" vercond="User Version == 12" default="2185233153">Skyrim Shader Flags for setting render/shader options.</add>
+        <add name="Shader Flags 2" type="SkyrimLightingShaderFlags2" vercond="User Version == 12" default="32801">Skyrim Shader Flags for setting render/shader options.</add>
         <add name="Texture Translation 1" type="TexCoord">Offset UVs</add>
         <add name="Texture Repeat" type="TexCoord" default="1.0, 1.0">Offset UVs</add>
         <add name="Texture Set" type="Ref" template="BSShaderTextureSet">Texture Set</add>
